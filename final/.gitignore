@@ -1,0 +1,11 @@
+# 기본적으로 모두 무시
+*
+
+# 예외로 myproject / my-ui 폴더와 내부 모든 파일 허용
+!/myproject/
+!/myproject/**
+!/my-ui/
+!/my-ui/**
+
+# .gitignore 파일 자체는 포함
+!.gitignore

@@ -1,0 +1,216 @@
+.recent-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+}
+
+.project-table th,
+.project-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.95rem;
+}
+
+.project-table th {
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 600;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+}
+
+.project-table td {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.project-table tr:hover td {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.sortable-header {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.sortable-header .sort-indicator {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin-left: 2px;
+  transition: color 0.2s ease;
+}
+
+.sortable-header.active,
+.sortable-header:hover {
+  color: #ff884b;
+}
+
+.sortable-header.active .sort-indicator,
+.sortable-header:hover .sort-indicator {
+  color: #ff884b;
+}
+
+.project-title-button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: #ff884b;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.project-title-button:hover {
+  color: #ffb487;
+}
+
+.project-table select {
+  background: rgba(12, 12, 12, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-table select:focus {
+  border-color: rgba(255, 107, 53, 0.7);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.25);
+}
+
+.project-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+  padding: 20px;
+}
+
+.project-modal {
+  background: rgba(12, 12, 12, 0.95);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  width: min(420px, 100%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  padding: 28px 30px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.project-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.project-modal__header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.project-modal__header p {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.project-modal__close {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.project-modal__close:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(0.96);
+}
+
+.project-modal__content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 20px;
+}
+
+.project-modal__content div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-modal__content dt {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.project-modal__content dd {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.project-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-modal__footer button {
+  padding: 10px 22px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(255, 107, 53, 0.25);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-modal__footer button:hover {
+  box-shadow: 0 18px 32px rgba(255, 107, 53, 0.35);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 520px) {
+  .project-modal__content {
+    grid-template-columns: 1fr;
+  }
+}

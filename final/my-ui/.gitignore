@@ -1,0 +1,11 @@
+node_modules
+
+# Environment files
+.env
+*.env
+*.env.*
+myproject/.env
+
+# Python virtual environments
+venv/
+.venv/

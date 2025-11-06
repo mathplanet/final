@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment files
+.env
+*.env
+
+# Django static/media (local)
+media/
+staticfiles/
+
+# Node (in case)
+node_modules/
+
+# IDE / OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

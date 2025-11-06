@@ -1,0 +1,214 @@
+.refine-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 5, 0.92);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+  padding: 40px;
+}
+
+.refine-modal {
+  position: relative;
+  width: min(960px, 90vw);
+  background: #0f0f0f;
+  border-radius: 18px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  color: #f4f4f4;
+}
+
+.refine-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px 16px;
+}
+
+.refine-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.refine-close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.refine-close:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.refine-body {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  padding: 0 28px 32px;
+}
+
+.refine-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.refine-preview__frame {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+}
+
+.refine-preview__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.refine-preview__placeholder {
+  padding: 40px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.refine-preview__controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.refine-preview__controls button {
+  padding: 10px 24px;
+  border-radius: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.refine-preview__controls button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.refine-preview__controls button:not(:disabled):hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.refine-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.refine-form__meta h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.refine-form__meta p {
+  margin: 8px 0 0;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+
+.refine-form__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.refine-form textarea {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px;
+  font-size: 0.95rem;
+  color: #f7f7f7;
+  line-height: 1.6;
+  resize: vertical;
+  min-height: 140px;
+}
+
+.refine-form textarea:focus {
+  outline: none;
+  border-color: rgba(102, 126, 234, 0.65);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+}
+
+.refine-form__error {
+  color: #ff6b35;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.refine-submit {
+  align-self: flex-end;
+  padding: 12px 32px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
+  color: #06121a;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.refine-submit:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.refine-submit:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 36px rgba(0, 201, 255, 0.35);
+}
+
+.refine-spinner {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: rgba(10, 10, 10, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.refine-spinner__circle {
+  width: 56px;
+  height: 56px;
+  border: 5px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #00c9ff;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
